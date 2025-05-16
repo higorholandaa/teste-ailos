@@ -1,0 +1,36 @@
+.stepper-container {
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  background-color: #E7EEF1;
+}
+
+.step-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.fixed-footer {
+  position: sticky;
+  bottom: 0;
+  background: #ffffff;
+  padding: 18px;
+  text-align: left;
+  gap: 10px;
+}
+
+.button-admissao {
+  background-color: #165C7D;
+  color: #fff;
+  padding: 13px 25px;
+  border-radius: 2px;
+  border: none;
+}
+
+.button-dicas {
+  color: #165C7D;
+  border: solid 1px #165C7D;
+  padding: 13px 25px;
+  border-radius: 2px;
+  background-color: transparent;
+}

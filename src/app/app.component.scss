@@ -1,0 +1,21 @@
+.main-container {
+  height: 100vh;
+}
+
+.app-sidenav {
+  width: 60px;
+  background-color: #004e6e;
+  color: white;
+  border-right: 1px solid #ccc;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content-wrapper {
+  flex: 1;
+  padding: 16px;
+}

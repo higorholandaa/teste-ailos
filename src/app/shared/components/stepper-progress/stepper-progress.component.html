@@ -1,0 +1,21 @@
+<div class="stepper">
+  <div class="step" [ngClass]="{'active': currentStep >= 1}">
+    <div class="circle"></div>
+    <div class="label">Início</div>
+  </div>
+
+  <div class="step" [ngClass]="{'active': currentStep >= 2}">
+    <div class="circle"></div>
+    <div class="label">Documentos</div>
+  </div>
+
+  <div class="step" [ngClass]="{'active': currentStep >= 3}">
+    <div class="circle"></div>
+    <div class="label">Dados cadastrais</div>
+  </div>
+
+  <div class="step" [ngClass]="{'active': currentStep >= 4}">
+    <div class="circle"></div>
+    <div class="label">Admissão</div>
+  </div>
+</div>

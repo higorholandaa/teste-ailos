@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="consulta-content">
+    <h3 class="consulta-title">Informe o CPF do futuro cooperado (a)</h3>
+    <p class="consulta-legenda">
+      Se necessário, você poderá duplicar uma conta existente ou pausar e retomar esse cadastro futuramente.<br>
+      Digite apenas os números (sem pontos ou traços).
+    </p>
+
+    <form #cpfForm="ngForm">
+      <label class="consulta-label" for="cpf">CPF</label>
+
+      <div class="d-flex">
+        <input [(ngModel)]="cpf"
+               name="cpf"
+               placeholder="000.000.000-00"
+               mask="000.000.000-00"
+               [ngClass]="{ 'input-error': erro }"
+               required minlength="11" maxlength="14" />
+
+        <button type="button"
+                class="consulta-button"
+                [disabled]="isLoading || dadosCPF"
+                (click)="consultarCPF()">
+          <div *ngIf="isLoading" class="dot-spinner"></div>
+          <span *ngIf="!isLoading">Consultar</span>
+        </button>
+      </div>
+
+      <div *ngIf="erro" class="error-message">
+        {{ erro }}
+      </div>
+    </form>
+  </div>
+
+  <app-dados-cooperado *ngIf="dadosCPF && !erro" [dados]="dadosCPF"></app-dados-cooperado>
+</div>

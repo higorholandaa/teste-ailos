@@ -1,0 +1,53 @@
+<div class="consulta-result mt-4">
+  <div class="row gx-2 d-flex justify-content-between">
+
+    <div class="col-3 consulta-box-info">
+      <h4 class="titulo">Situação cadastral do CPF</h4>
+      <p class="subtitulo">Consulta na Receita Federal</p>
+
+      <div class="info-item">
+        <mat-icon>person</mat-icon>
+        <div>
+          <label class="label">Nome</label>
+          <div class="valor">{{ dados.nome || 'Não informado' }}</div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <mat-icon color="primary">check_circle</mat-icon>
+        <div>
+          <label class="label">Situação do CPF</label>
+          <div class="valor">{{ dados.situacao || 'Não informada' }}</div>
+        </div>
+      </div>
+    </div>
+
+    <ng-container *ngIf="dados.contas && dados.contas.length > 0; else semContas">
+      <div class="col-3 consulta-box-info" *ngFor="let conta of dados.contas">
+        <h4 class="titulo">{{ conta.tipo }}</h4>
+        <p class="subtitulo">Cooperativa {{ conta.cooperativa }}</p>
+
+        <div class="info-item">
+          <mat-icon>credit_card</mat-icon>
+          <div>
+            <label class="label">Número da conta</label>
+            <div class="valor">{{ conta.numero || 'Não encontrada' }}</div>
+          </div>
+        </div>
+
+        <div class="info-duplicar text-center">
+          <span class="duplicar-item">duplicar conta</span>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #semContas>
+      <div class="col-3 consulta-box-info">
+        <h4 class="titulo">Contas</h4>
+        <p class="subtitulo">Nenhuma conta encontrada</p>
+      </div>
+    </ng-template>
+
+    <div class="col-3"></div>
+  </div>
+</div>

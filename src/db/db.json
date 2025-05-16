@@ -1,0 +1,21 @@
+{
+  "cpfConsulta": [
+    {
+      "cpf": "12345678909",
+      "nome": "Mariane de Sousa Oliveira",
+      "situacao": "Regular",
+      "contas": [
+        {
+          "tipo": "Conta aplicação",
+          "cooperativa": "Viacred",
+          "numero": "552626-2"
+        },
+        {
+          "tipo": "Conta corrente",
+          "cooperativa": "Viacred",
+          "numero": "552626-2"
+        }
+      ]
+    }
+  ]
+}

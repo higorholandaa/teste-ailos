@@ -1,0 +1,14 @@
+<div class="stepper-container">
+  <app-stepper-progress [currentStep]="stepAtual"></app-stepper-progress>
+  
+  <div class="step-content">
+    <ng-container [ngSwitch]="stepAtual">
+      <app-consulta-cpf *ngSwitchCase="1" (dadosPreenchidos)="exibirBotao = $event"></app-consulta-cpf>
+    </ng-container>
+  </div>
+
+  <div class="fixed-footer d-flex">
+    <button class="button-admissao" *ngIf="exibirBotao" (click)="reiniciarConsulta()">Iniciar nova admissão</button>
+    <button class="button-dicas">Dicas para abertura da conta</button>
+  </div>
+</div>

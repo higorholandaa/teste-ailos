@@ -1,0 +1,26 @@
+.logo img {
+  object-fit: contain;
+  width: 60px;
+  height: 60px;
+}
+
+mat-icon {
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+a.mat-list-item {
+  justify-content: center;
+  height: 56px;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #165C7D;
+  color: white;
+  width: 90px;
+  align-items: center;
+}
