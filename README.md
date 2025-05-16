@@ -1,27 +1,51 @@
-# TesteAilos
+# 🏦 TesteAilos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Projeto Angular desenvolvido como teste técnico para a Ailos, com foco em uma interface de consulta de CPF, exibição de dados e navegação por etapas (stepper).
 
-## Development server
+## 🚀 Tecnologias utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Angular CLI 17.3.17](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [NGX Mask](https://github.com/JsDaddy/ngx-mask) — para máscaras de input
+- [JSON Server](https://github.com/typicode/json-server) — API fake para backend REST
+- TypeScript
+- SCSS
+- RxJS
+- HTML5
 
-## Code scaffolding
+## 📦 Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Máscara para campos de CPF usando NGX Mask
+- Validação de CPF no frontend
+- Consulta de dados de cooperado via serviço (JSON Server)
+- Exibição de retorno na tela com base na resposta
+- Stepper (etapas) com progresso visual
+- Componente de dicas fixo no rodapé
 
-## Build
+## 🛠️ Como rodar o projeto localmente
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 1. Clone o repositório
 
-## Running unit tests
+git clone https://github.com/seu-usuario/TesteAilos.git
+cd TesteAilos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 2. Instale as dependências do projeto
+npm install
 
-## Running end-to-end tests
+### 3. Adicione o Angular Material
+ng add @angular/material
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 4. Instale o NGX Mask
+npm install ngx-mask --save
 
-## Further help
+### 5. Instale o JSON Server globalmente  
+npm install -g json-server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 6. Inicie o JSON Server na porta 3000  
+json-server --watch db.json --port 3000
+
+### 7. Execute o servidor Angular  
+ng serve
+
+### 8. Abra no navegador  
+http://localhost:4200
