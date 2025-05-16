@@ -26,7 +26,7 @@ Projeto Angular desenvolvido como teste técnico para a Ailos, com foco em uma i
 
 ### 1. Clone o repositório
 
-git clone https://github.com/seu-usuario/TesteAilos.git
+git clone https://github.com/higorholandaa/teste-ailos
 cd TesteAilos
 
 ### 2. Instale as dependências do projeto
